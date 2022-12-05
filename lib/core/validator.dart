@@ -8,7 +8,7 @@ class Validate {
   }
 
   static String? password(String password) {
-    Pattern pattern = r'^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,15}$';
+    Pattern pattern = r'^(?=.*\d)(?=.*[a-z])(?=.*[A-Z!@#$%^&*]).{6,15}$';
     RegExp regex = RegExp(pattern as String);
     if (regex.hasMatch(password)) return null;
     return 'Password must be at least 6 and maximum of 15 characters';
